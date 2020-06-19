@@ -1,7 +1,7 @@
 import 'package:meta/meta.dart';
 
-import '../AggregateRoot.dart';
-import 'CheckListElement.dart';
+import '../aggregate_root.dart';
+import 'check_list_element.dart';
 
 class CheckList extends AggregateRoot {
   final CheckListId id;

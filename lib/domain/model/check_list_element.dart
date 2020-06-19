@@ -1,6 +1,6 @@
 import 'package:meta/meta.dart';
 
-import '../Entity.dart';
+import '../entity.dart';
 
 class CheckListElement extends Entity {
   final CheckListElementId id;

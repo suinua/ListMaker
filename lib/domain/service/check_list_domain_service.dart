@@ -1,5 +1,5 @@
-import '../model/CheckList.dart';
-import '../repository/CheckListRepository.dart';
+import '../model/check_list.dart';
+import '../repository/check_list_repository.dart';
 
 abstract class CheckListDomainService {
   final CheckListRepository repository;

@@ -1,4 +1,5 @@
-import '../models/CheckList.dart';
+
+import '../model/check_list.dart';
 
 abstract class CheckListRepository {
   void add(CheckList checkList);
