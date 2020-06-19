@@ -30,7 +30,7 @@ class CheckList extends AggregateRoot {
 class CheckListId {
   final String value;
 
-  CheckListId({@required this.value}) : assert(value != null);
+  CheckListId(this.value) : assert(value != null);
 
   @override
   bool operator ==(Object other) {
