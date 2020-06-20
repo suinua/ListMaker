@@ -1,14 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);
-
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
+input::-moz-focus-inner {
+  border: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
-#output {
-  padding: 20px;
-  text-align: center;
+input, select, textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+body, input, select, textarea {
+  color: #888;
+  font-family: "Lato", sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+  line-height: 1.75em;
 }
