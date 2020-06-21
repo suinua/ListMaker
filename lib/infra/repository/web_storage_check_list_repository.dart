@@ -3,30 +3,29 @@ import 'package:ListMaker/domain/repository/check_list_repository.dart';
 
 class WebStorageCheckListRepository extends CheckListRepository{
   @override
-  void addCheckList(CheckList checkList) {
-    // TODO: implement addCheckList
+  void add(CheckList checkList) {
+    // TODO: implement add
   }
 
   @override
-  void deleteCheckList(CheckList checkList) {
-    // TODO: implement deleteCheckList
+  void delete(CheckList checkList) {
+    // TODO: implement delete
   }
 
   @override
-  CheckList findCheckListById() {
-    // TODO: implement findCheckListById
+  CheckList findById(CheckListId checkListId) {
+    // TODO: implement findById
     throw UnimplementedError();
   }
 
   @override
-  List<CheckList> getAllCheckList() {
-    // TODO: implement getAllCheckList
+  List<CheckList> getAll() {
+    // TODO: implement getAll
     throw UnimplementedError();
   }
 
   @override
-  void updateCheckList(CheckList checkList) {
-    // TODO: implement updateCheckList
+  void update(CheckList checkList) {
+    // TODO: implement update
   }
-
 }
