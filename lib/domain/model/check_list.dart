@@ -1,4 +1,5 @@
 import 'package:meta/meta.dart';
+import 'package:uuid/uuid.dart';
 
 import '../aggregate_root.dart';
 import 'check_list_element.dart';
@@ -13,6 +14,10 @@ class CheckList extends AggregateRoot {
         assert(title != null),
         assert(elements != null);
 
+  CheckList.asNew({@required this.title})
+      : id = CheckListId.asNew(),
+        elements = [];
+
   void addCheckListElement(CheckListElement checkListElement) =>
       elements.add(checkListElement);
 
@@ -21,9 +26,9 @@ class CheckList extends AggregateRoot {
 
   void updateCheckListElement(CheckListElement checkListElement) {
     elements.map((CheckListElement e) => (CheckListElement e) {
-      e.japanese = checkListElement.japanese;
-      e.english = checkListElement.english;
-    });
+          e.japanese = checkListElement.japanese;
+          e.english = checkListElement.english;
+        });
   }
 }
 
@@ -31,6 +36,8 @@ class CheckListId {
   final String value;
 
   CheckListId(this.value) : assert(value != null);
+
+  CheckListId.asNew() : value = Uuid().v4();
 
   @override
   bool operator ==(Object other) {
