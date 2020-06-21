@@ -1,10 +1,13 @@
+import 'dart:html';
+
 import 'package:ListMaker/domain/model/check_list.dart';
 import 'package:ListMaker/domain/repository/check_list_repository.dart';
+import 'package:ListMaker/infra/repository/dto/check_list_dto.dart';
 
-class WebStorageCheckListRepository extends CheckListRepository{
+class WebStorageCheckListRepository extends CheckListRepository {
   @override
   void add(CheckList checkList) {
-    // TODO: implement add
+    window.localStorage['check_list'] = CheckListDTO.encode(checkList).toString();
   }
 
   @override
@@ -14,8 +17,7 @@ class WebStorageCheckListRepository extends CheckListRepository{
 
   @override
   CheckList findById(CheckListId checkListId) {
-    // TODO: implement findById
-    throw UnimplementedError();
+    return null;
   }
 
   @override

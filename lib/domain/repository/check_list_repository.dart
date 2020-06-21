@@ -1,5 +1,5 @@
 
-import '../model/check_list.dart';
+import 'package:ListMaker/domain/model/check_list.dart';
 
 abstract class CheckListRepository {
   CheckList findById(CheckListId checkListId);
