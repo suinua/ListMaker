@@ -1,19 +1,79 @@
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+div.title {
+  color: #4acaa8;
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0;
 }
 
-input, select, textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+div.subTitle {
+  color: #aaa;
+  position: relative;
+  font-size: 1.75em;
+  font-weight: 700;
 }
 
-body, input, select, textarea {
-  color: #888;
-  font-family: "Lato", sans-serif;
-  font-size: 16pt;
-  font-weight: 400;
-  line-height: 1.75em;
+.descriptionText {
+  color: #aaa;
+  position: relative;
+  margin: 0 0 1.6875em 0;
+}
+
+input[type='text'] {
+  height: 50px;
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  padding: 0.3em;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  color: #aaaaaa;
+  border: 1px solid #4acaa8;
+  box-shadow: 1px 1px 2px 0 #707070 inset;
+  border-radius: 4px;
+}
+
+input[type='text']:focus {
+  outline: none;
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+
+a.button {
+  position: relative;
+  display: inline-block;
+  padding: 0.8em;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  background: #4acaa8;
+  border-bottom: 2px solid #00838F;
+  border-radius: 4px;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+}
+a.button:active {
+  border-bottom: 2px solid #26C6DA;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.fileUploader {
+  border: 1px solid #ddd;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #666;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.09);
+
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.fileUploader input[type="file"] {
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  font-size: 100px;
+  cursor: pointer;
 }
