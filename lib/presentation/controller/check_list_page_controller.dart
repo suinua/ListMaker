@@ -1,32 +1,29 @@
 import 'dart:html';
 
-import 'package:ListMaker/application/service/check_list_service.dart';
-import 'package:ListMaker/domain/model/check_list.dart';
+import 'package:ListMaker/usecase/service/check_list_usecase_service.dart';
 
+class CheckListPageController {
+  final CheckListUsecaseService _service;
 
-//とりあえず実装
-class IndexPage {
-  final CheckListService _service;
-
-  IndexPage() : _service = CheckListService() {
-    querySelector('#addCheckList').onClick.listen(addCheckList);
+  CheckListPageController() : _service = CheckListUsecaseService() {
+    querySelector('#addCheckList').onClick.listen((e) => addNewCheckList);
   }
 
   void resetNewCheckListTitleInput() {
     InputElement newCheckListTitleInputElement =
-        querySelector('#NewCheckListTitleInput');
+    querySelector('#NewCheckListTitleInput');
     newCheckListTitleInputElement.text = '';
   }
 
   String getNewCheckListName() {
     InputElement newCheckListTitleInputElement =
-        querySelector('#NewCheckListTitleInput');
+    querySelector('#NewCheckListTitleInput');
     return newCheckListTitleInputElement.value;
   }
 
-  void addCheckList(Event event) {
+  void addNewCheckList() {
     var title = getNewCheckListName();
-    _service.add(CheckList.asNew(title: title));
+    _service.add(title);
 
     DivElement checkListArea = querySelector('#CheckListArea');
 

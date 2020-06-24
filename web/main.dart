@@ -1,8 +1,6 @@
-import 'dart:html';
-
-import 'package:ListMaker/presentation/index_page.dart';
+import 'package:ListMaker/presentation/controller/check_list_page_controller.dart';
 
 
 void main() {
-  IndexPage();
+  CheckListPageController();
 }
