@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import 'package:ListMaker/presentation/converter/check_list_html_converter.dart';
 import 'package:ListMaker/usecase/service/check_list_usecase_service.dart';
 
 class CheckListPageController {
@@ -28,6 +29,6 @@ class CheckListPageController {
     DivElement checkListArea = querySelector('#checkListArea');
 
     checkListArea.insertAdjacentElement(
-        'beforeend', newCheckList.asHtmlElement());
+        'beforeend', CheckListHtmlConverter.execute(newCheckList));
   }
 }
