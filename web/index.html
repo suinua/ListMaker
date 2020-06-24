@@ -7,18 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="scaffolded-by" content="https://github.com/dart-lang/stagehand">
     <title>ListMaker</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/check_list.css">
     <link rel="icon" href="favicon.ico">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
-<div id="CheckListArea"></div>
+<div id="checkListArea" class="checkListArea">
+</div>
 <div style="text-align: center">
     <form style="display: inline">
-        <label for="NewCheckListTitleInput"></label>
-        <input id="NewCheckListTitleInput" type="text">
+        <label for="newCheckListTitleInput"></label>
+        <input id="newCheckListTitleInput" type="text">
         <a id="addCheckList" class="button">追加</a>
     </form>
 </div>
+
+<script src="../output/main.js"></script>
 </body>
 </html>

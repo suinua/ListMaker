@@ -6,31 +6,28 @@ class CheckListPageController {
   final CheckListUsecaseService _service;
 
   CheckListPageController() : _service = CheckListUsecaseService() {
-    querySelector('#addCheckList').onClick.listen((e) => addNewCheckList);
+    querySelector('#addCheckList').onClick.listen(addNewCheckList);
   }
 
   void resetNewCheckListTitleInput() {
     InputElement newCheckListTitleInputElement =
-    querySelector('#NewCheckListTitleInput');
+        querySelector('#newCheckListTitleInput');
     newCheckListTitleInputElement.text = '';
   }
 
   String getNewCheckListName() {
     InputElement newCheckListTitleInputElement =
-    querySelector('#NewCheckListTitleInput');
+        querySelector('#newCheckListTitleInput');
     return newCheckListTitleInputElement.value;
   }
 
-  void addNewCheckList() {
+  void addNewCheckList(Event event) {
     var title = getNewCheckListName();
-    _service.add(title);
+    var newCheckList = _service.add(title);
 
-    DivElement checkListArea = querySelector('#CheckListArea');
-
-    var checkListHtmlElement = DivElement();
-    checkListHtmlElement.innerHtml = title;
+    DivElement checkListArea = querySelector('#checkListArea');
 
     checkListArea.insertAdjacentElement(
-        'beforeend', checkListHtmlElement);
+        'beforeend', newCheckList.asHtmlElement());
   }
 }

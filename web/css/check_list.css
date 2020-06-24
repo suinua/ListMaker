@@ -1,0 +1,26 @@
+
+.checkListArea > .checkList {
+    display: inline-block;
+    margin: 0;
+    background: #fdfdfd;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.33);
+    border-radius: 0 0 5px 5px;
+}
+
+.checkList > .title {
+    padding-left: 2em;
+    padding-right: 2em;
+    background: #f4f4f4;
+}
+
+.checkList > .title > .text {
+    margin: 0;
+}
+
+.checkList > .elements {
+    padding-left: 0.5em;
+}
+
+.checkList > .elements > .element > p{
+    display: inline-block;
+}

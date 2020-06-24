@@ -1,4 +1,4 @@
-div.title {
+.header  > .title {
   color: #4acaa8;
   font-size: 3.5em;
   font-weight: 700;
@@ -6,7 +6,7 @@ div.title {
   margin: 0;
 }
 
-div.subTitle {
+.header > .subTitle {
   color: #aaa;
   position: relative;
   font-size: 1.75em;
