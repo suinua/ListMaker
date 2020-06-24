@@ -1,6 +1,6 @@
 import 'package:ListMaker/domain/model/check_list_element.dart';
 
-class CheckListElementDTO {
+class CheckListElementJsonAdapter {
   static CheckListElement decode(Map<String, dynamic> json) {
     return CheckListElement(
         id: CheckListElementId(json['id']),

@@ -1,14 +1,15 @@
 import 'package:ListMaker/domain/model/check_list.dart';
-import 'package:ListMaker/infra/repository/dto/check_list_element_dto.dart';
+import 'package:ListMaker/infra/repository/json_adapter/check_list_element_json_adapter.dart';
 
-class CheckListDTO {
+
+class CheckListJsonAdapter {
   static CheckList decode(Map<String, dynamic> json) {
     return CheckList(
         id: CheckListId(json['id']),
         title: json['title'],
         elements: List<Map>.from(json['elements'])
             .map((e) => Map<String, dynamic>.from(e))
-            .map(CheckListElementDTO.decode)
+            .map(CheckListElementJsonAdapter.decode)
             .toList());
   }
 
@@ -16,7 +17,7 @@ class CheckListDTO {
     return <String, dynamic>{
       'id': checkList.id.value,
       'title': checkList.title,
-      'elements': checkList.elements.map(CheckListElementDTO.encode).toList()
+      'elements': checkList.elements.map(CheckListElementJsonAdapter.encode).toList()
     };
   }
 }
